@@ -1,0 +1,13 @@
+
+.welcome{border:0;padding:0;margin:0;width:100vw;max-width:none;height:100dvh;max-height:none;background:var(--paper,#f8f8fa);color:var(--ink,#202630);overflow:hidden;opacity:1;transition:opacity .65s ease,filter .65s ease}
+.welcome::backdrop{background:transparent}
+.welcome-stage{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(ellipse at 50% 55%,color-mix(in srgb,var(--blue) 9%,transparent),transparent 65%)}
+.welcome-wordmark{position:absolute;left:6%;top:35px;font-size:30px;font-weight:700;letter-spacing:-2px}
+.welcome-start{border:1px solid color-mix(in srgb,var(--blue) 25%,transparent);border-radius:999px;padding:20px 32px;background:var(--blue);color:white;font:inherit;font-size:18px;cursor:pointer;box-shadow:0 15px 60px color-mix(in srgb,var(--blue) 20%,transparent)}
+html[data-theme=dark] .welcome{color:#f6f7fb;background:#0b0d10}
+html[data-theme=dark] .welcome-start{color:#111}
+.welcome-copy{position:absolute;font-size:clamp(38px,7vw,110px);font-weight:650;line-height:1.05;letter-spacing:-.055em;width:90%;opacity:0;pointer-events:none;will-change:transform,opacity}
+.welcome-skip{position:absolute;right:6%;top:40px;border:0;background:transparent;color:inherit;font:inherit;font-size:14px;cursor:pointer}
+.welcome.is-done{opacity:0;filter:blur(10px);pointer-events:none}
+html.welcome-open{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.welcome{transition:none}}
